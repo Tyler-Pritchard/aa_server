@@ -7,6 +7,7 @@ const authRoute = require("./routes/auth");
 
 dotenv.config();
 
+mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log("Database Connection Successful!"))
     .catch((err) => {

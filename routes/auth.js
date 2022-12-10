@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
+const { verifyTokenAndAuthorization } = require("./verifyToken");
 
 //REGISTER
 router.post("/register", async (req, res) => {
@@ -23,7 +24,6 @@ router.post("/register", async (req, res) => {
 });
 
 //LOGIN
-
 router.post('/login', async (req, res) => {
     try{
         const user = await User.findOne(
@@ -41,7 +41,6 @@ router.post('/login', async (req, res) => {
             user.password,
             process.env.PASS_SEC
         );
-
 
         const originalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
 
@@ -67,7 +66,6 @@ router.post('/login', async (req, res) => {
     } catch(err) {
         res.status(500).json(err);
     }
-
 });
 
 module.exports = router;

@@ -86,7 +86,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDY5MDExNiwiZXhwIjoxNjcwOTQ5MzE2fQ.KgrEafov_kZHn1_RTAhZDcbD46G55pawzwYTrFlCTeM",
+								"value": "",
 								"type": "text"
 							}
 						],
@@ -128,7 +128,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDY5MDcxMywiZXhwIjoxNjcwOTQ5OTEzfQ.WNtNkGOTB5bhutoraE_oj365N4yKiJkF0cKWIy4QEsQ",
+								"value": "Bearer",
 								"type": "text"
 							}
 						],
@@ -168,7 +168,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDY5MzkxMCwiZXhwIjoxNjcwOTUzMTEwfQ.EMb_IiUN1K6_gjIoumSgGSToUOeHyPNZs93yBhhPRJU",
+								"value": "Bearer",
 								"type": "text"
 							}
 						],
@@ -299,7 +299,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NzA2ODgxMTgsImV4cCI6MTY3MDk0NzMxOH0.mH62ys4EhtI22wnaRRjF6CJkbQ3JJCKYNBo-ZsyH8to",
+								"value": "Bearer",
 								"type": "text"
 							}
 						],
@@ -354,7 +354,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDg5MDY0OCwiZXhwIjoxNjcxMTQ5ODQ4fQ.VtFGF_21iAgLgye3kq0dhPIdsPjRF-PAPH0UNc4pqs0",
+								"value": "Bearer",
 								"type": "text"
 							}
 						],
@@ -396,7 +396,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NzA2ODgxMTgsImV4cCI6MTY3MDk0NzMxOH0.mH62ys4EhtI22wnaRRjF6CJkbQ3JJCKYNBo-ZsyH8to",
+								"value": "Bearer",
 								"type": "text"
 							}
 						],

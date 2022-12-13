@@ -128,7 +128,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "Bearer",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDY5MDcxMywiZXhwIjoxNjcwOTQ5OTEzfQ.WNtNkGOTB5bhutoraE_oj365N4yKiJkF0cKWIy4QEsQ",
 								"type": "text"
 							}
 						],
@@ -168,7 +168,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "Bearer",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDY5MzkxMCwiZXhwIjoxNjcwOTUzMTEwfQ.EMb_IiUN1K6_gjIoumSgGSToUOeHyPNZs93yBhhPRJU",
 								"type": "text"
 							}
 						],
@@ -299,7 +299,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "Bearer",
+								"value": "",
 								"type": "text"
 							}
 						],
@@ -354,7 +354,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "Bearer",
+								"value": "",
 								"type": "text"
 							}
 						],
@@ -396,7 +396,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "Bearer",
+								"value": "",
 								"type": "text"
 							}
 						],
@@ -431,8 +431,41 @@
 				{
 					"name": "INCOME",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [
+							{
+								"key": "token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/orders/income",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders",
+								"income"
+							]
+						}
 					},
 					"response": []
 				}

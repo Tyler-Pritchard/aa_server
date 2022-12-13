@@ -10,7 +10,7 @@
 			"name": "Users",
 			"item": [
 				{
-					"name": "localhost:5000",
+					"name": "POST",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -54,7 +54,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:5000/api/users/usertest",
+					"name": "GET",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -72,6 +72,129 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GET-USER",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDY5MDExNiwiZXhwIjoxNjcwOTQ5MzE2fQ.KgrEafov_kZHn1_RTAhZDcbD46G55pawzwYTrFlCTeM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/users/find/6394b4499c6e2cb55f820bea",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"find",
+								"6394b4499c6e2cb55f820bea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-USERS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDY5MDcxMywiZXhwIjoxNjcwOTQ5OTEzfQ.WNtNkGOTB5bhutoraE_oj365N4yKiJkF0cKWIy4QEsQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-USER STATS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDY5MzkxMCwiZXhwIjoxNjcwOTUzMTEwfQ.EMb_IiUN1K6_gjIoumSgGSToUOeHyPNZs93yBhhPRJU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"tyler\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/users/stats",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"stats"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -79,13 +202,72 @@
 			"name": "Auth",
 			"item": [
 				{
-					"name": "localhost:5000/api/auth/login",
+					"name": "POST-LOGIN",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"Tyler\",\n    \"password\": \"123456\"\n}",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-REGISTER",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "tyler",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "tyler",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"jim\",\n    \"email\": \"jim@gmail.com\",\n    \"password\": \"jim\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -108,13 +290,22 @@
 					"response": []
 				},
 				{
-					"name": "localhost:5000/api/auth/register",
+					"name": "PUT-LOGIN",
 					"request": {
-						"method": "POST",
-						"header": [],
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NzA2ODgxMTgsImV4cCI6MTY3MDk0NzMxOH0.mH62ys4EhtI22wnaRRjF6CJkbQ3JJCKYNBo-ZsyH8to",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"admin\",\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"admin\"\n}",
+							"raw": "{\n    \"username\": \"tyler\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -122,17 +313,126 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5000/api/auth/register",
+							"raw": "localhost:5000/api/users/6394136e1e15d45b5fbe1069",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
 								"api",
-								"auth",
-								"register"
+								"users",
+								"6394136e1e15d45b5fbe1069"
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "POST-PRODUCT",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDg5MDY0OCwiZXhwIjoxNjcxMTQ5ODQ4fQ.VtFGF_21iAgLgye3kq0dhPIdsPjRF-PAPH0UNc4pqs0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"German Button\",\n    \"desc\": \"many buttons\",\n    \"img\": \"test\",\n    \"categories\": [\"instrument\", \"accordion\"],\n    \"size\": \"N/A\",\n    \"color\": \"red\",\n    \"price\": \"199\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "POST-ORDER",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NzA2ODgxMTgsImV4cCI6MTY3MDk0NzMxOH0.mH62ys4EhtI22wnaRRjF6CJkbQ3JJCKYNBo-ZsyH8to",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"6394136e1e15d45b5fbe1069\",\n    \"products\": [\n        {\n            \"productId\": \"23423f\",\n            \"quantity\": 2\n        },\n                {\n            \"productId\": \"234sdf3f\",\n            \"quantity\": 1\n        }\n    ],\n    \"amount\": 50,\n    \"address\": \"1234 usa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Utility Functions",
+			"item": [
+				{
+					"name": "INCOME",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}

@@ -7,11 +7,11 @@ const ProductSchema = new mongoose.Schema(
             required: true, 
             unique: true
         },
-        desc:{
+        description:{
             type: String,
             required: true,
         },
-        img: {
+        image: {
             type: String,
             required: true,
         },
@@ -28,6 +28,13 @@ const ProductSchema = new mongoose.Schema(
             type: Number,
             required: true,
         },
+        quantity: {
+            type: Number,
+            required: true,
+        },
+        featured: {
+            type: Boolean
+        }
     },
     { timestamps: true }
 );

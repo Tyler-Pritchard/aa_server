@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1640b72c-461f-4007-8b26-3a91b9e03eef",
+		"_postman_id": "2cb0bb8d-d1a3-438b-bb72-6795419eb501",
 		"name": "AccordionApocalypse",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "5392649"
@@ -380,6 +380,158 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "PUT-PRODUCT",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MDk3ODI3OSwiZXhwIjoxNjcxMjM3NDc5fQ.ENpJ_WPmQZ54n40MnuBcGSmYPosc9Wxd_pPJU0MK8nY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Bellcordion 120 Bass\",\n    \"image\": \"bellcordion\",\n    \"price\": 1000.00,\n    \"featured\": true,\n    \"description\": \"This beautiful 1950's 120 bass Bellcordion has a 4/3 reed configuration and comes with a dry Italian tuning with just a hint of a tremolo. There are 10 treble register variations with a palm master switch. The bass side has 4 register settings. \\n We have done a thorough cleaning, some repair work, and an inspection, including checking every button and key, being sure to check each note with the reed block out and in the accordion. This accordion, with only one previous owner, is a high quality instrument. It has hand made reeds, a palm switch, and comes with a hard case.\\n Feel free to contact us at 415-596-5952 with any questions you may have about this instrument.\",\n    \"quantity\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE-PRODUCT",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MjQzOTk5OSwiZXhwIjoxNjcyNjk5MTk5fQ.S2yVGD614rzkX1Chx3YwHKfiGrxSC66P0WrOAyNTMHo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Bellcordion 120 Bass\",\n    \"image\": \"https://unsplash.com/photos/hcxmDAjDGdQhttps://unsplash.com/photos/hcxmDAjDGdQ\",\n    \"price\": 1000.00,\n    \"featured\": true,\n    \"description\": \"This beautiful 1950's 120 bass Bellcordion has a 4/3 reed configuration and comes with a dry Italian tuning with just a hint of a tremolo. There are 10 treble register variations with a palm master switch. The bass side has 4 register settings. \\n We have done a thorough cleaning, some repair work, and an inspection, including checking every button and key, being sure to check each note with the reed block out and in the accordion. This accordion, with only one previous owner, is a high quality instrument. It has hand made reeds, a palm switch, and comes with a hard case.\\n Feel free to contact us at 415-596-5952 with any questions you may have about this instrument.\",\n    \"quantity\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/products/63991efbd8433b65b47a2fc0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products",
+								"63991efbd8433b65b47a2fc0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET-PRODUCTS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MjQzOTk5OSwiZXhwIjoxNjcyNjk5MTk5fQ.S2yVGD614rzkX1Chx3YwHKfiGrxSC66P0WrOAyNTMHo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Bellcordion 120 Bass\",\n    \"image\": \"https://unsplash.com/photos/hcxmDAjDGdQhttps://unsplash.com/photos/hcxmDAjDGdQ\",\n    \"price\": 1000.00,\n    \"featured\": true,\n    \"description\": \"This beautiful 1950's 120 bass Bellcordion has a 4/3 reed configuration and comes with a dry Italian tuning with just a hint of a tremolo. There are 10 treble register variations with a palm master switch. The bass side has 4 register settings. \\n We have done a thorough cleaning, some repair work, and an inspection, including checking every button and key, being sure to check each note with the reed block out and in the accordion. This accordion, with only one previous owner, is a high quality instrument. It has hand made reeds, a palm switch, and comes with a hard case.\\n Feel free to contact us at 415-596-5952 with any questions you may have about this instrument.\",\n    \"quantity\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/products/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -464,6 +616,254 @@
 								"api",
 								"orders",
 								"income"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "GET-EVENT",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MjQzOTk5OSwiZXhwIjoxNjcyNjk5MTk5fQ.S2yVGD614rzkX1Chx3YwHKfiGrxSC66P0WrOAyNTMHo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/events",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-EVENT",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MjQzOTk5OSwiZXhwIjoxNjcyNjk5MTk5fQ.S2yVGD614rzkX1Chx3YwHKfiGrxSC66P0WrOAyNTMHo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Event 3\",\n    \"image\": \"https://unsplash.com/photos/Gi6-m_t_W-E\",\n    \"featured\": \"false\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\n    \"location\": \"Tucson, AZ\",\n    \"date\": \"01-04-22\",\n    \"time\": \"6pm\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/events",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE-EVENT",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MjQzOTk5OSwiZXhwIjoxNjcyNjk5MTk5fQ.S2yVGD614rzkX1Chx3YwHKfiGrxSC66P0WrOAyNTMHo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/events/<EVENT_ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events",
+								"<EVENT_ID>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT-EVENT",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MjQzOTk5OSwiZXhwIjoxNjcyNjk5MTk5fQ.S2yVGD614rzkX1Chx3YwHKfiGrxSC66P0WrOAyNTMHo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/events/<EVENT_ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"events",
+								"<EVENT_ID>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instructors",
+			"item": [
+				{
+					"name": "GET-INSTRUCTORS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MjQzOTk5OSwiZXhwIjoxNjcyNjk5MTk5fQ.S2yVGD614rzkX1Chx3YwHKfiGrxSC66P0WrOAyNTMHo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/instructors",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"instructors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST-INSTRUCTOR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MjQzOTk5OSwiZXhwIjoxNjcyNjk5MTk5fQ.S2yVGD614rzkX1Chx3YwHKfiGrxSC66P0WrOAyNTMHo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Marian Kelly\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\n    \"image\": \"https://unsplash.com/photos/CtOsywYYlik\",\n    \"location\": \"California\",\n    \"featured\": \"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/instructors",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"instructors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT-INSTRUCTOR",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MjQzOTk5OSwiZXhwIjoxNjcyNjk5MTk5fQ.S2yVGD614rzkX1Chx3YwHKfiGrxSC66P0WrOAyNTMHo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Marian Kelly\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\n    \"image\": \"https://unsplash.com/photos/CtOsywYYlik\",\n    \"location\": \"California\",\n    \"featured\": \"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/<INSTRUCTOR_ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"<INSTRUCTOR_ID>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE-INSTRUCTOR",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTQxMzZlMWUxNWQ0NWI1ZmJlMTA2OSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MjQzOTk5OSwiZXhwIjoxNjcyNjk5MTk5fQ.S2yVGD614rzkX1Chx3YwHKfiGrxSC66P0WrOAyNTMHo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Marian Kelly\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\",\n    \"image\": \"https://unsplash.com/photos/CtOsywYYlik\",\n    \"location\": \"California\",\n    \"featured\": \"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/<INSTRUCTOR_ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"<INSTRUCTOR_ID>"
 							]
 						}
 					},
